@@ -1,0 +1,30 @@
+{
+  "presets": [
+    "@babel/preset-env",
+    "@babel/preset-react",
+    "@emotion/babel-preset-css-prop"
+  ],
+  "plugins": [
+    "react-hot-loader/babel",
+    [
+      "module-resolver",
+      {
+        "extensions": [
+          ".js",
+          ".jsx"
+        ],
+        "alias": {
+          "^@atoms/(.+)": "./src/js/components/atoms/\\1",
+          "^@molecules/(.+)": "./src/js/components/molecules/\\1",
+          "^@organisms/(.+)": "./src/js/components/organisms/\\1",
+          "^@pages/(.+)": "./src/js/components/pages/\\1",
+          "^@templates/(.+)": "./src/js/components/templates/\\1",
+          "^@store/(.+)": "./src/js/store/\\1",
+          "^@shared/(.+)": "./src/js/shared/\\1",
+          "^@api/(.+)": "./src/js/api/\\1",
+          "^@api$": "./src/js/api/index.js"
+        }
+      }
+    ]
+  ]
+}

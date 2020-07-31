@@ -1,0 +1,49 @@
+{
+  "compilerOptions": {
+    "allowSyntheticDefaultImports": true,
+    "experimentalDecorators": true,
+    "baseUrl": ".",
+    "target": "es6",
+    "module": "commonjs",
+    "jsx": "react",
+    "paths": {
+      "@atoms/*": [
+        "src/js/components/atoms/*"
+      ],
+      "@molecules/*": [
+        "src/js/components/molecules/*"
+      ],
+      "@organisms/*": [
+        "src/js/components/organisms/*"
+      ],
+      "@pages/*": [
+        "src/js/components/pages/*"
+      ],
+      "@templates/*": [
+        "src/js/components/templates/*"
+      ],
+      "@store/*": [
+        "src/js/store/*"
+      ],
+      "@shared/*": [
+        "src/js/shared/*"
+      ],
+      "@api/*": [
+        "src/js/api/*"
+      ],
+      "@api": [
+        "src/api/index.js"
+      ]
+    }
+  },
+  "exclude": [
+    "dist",
+    "node_modules",
+    ".vscode"
+  ],
+  "typeAcquisition": {
+    "include": [
+      "jest"
+    ]
+  }
+}
