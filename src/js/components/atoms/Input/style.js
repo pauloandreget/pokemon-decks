@@ -1,8 +1,5 @@
+/* eslint-disable import/prefer-default-export */
 export const styleWrapper = () => `
-  margin-bottom: 8px;
-`;
-
-export const styleGroup = () => `
   position: relative;
 
   label {

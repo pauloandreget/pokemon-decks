@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
-import { styleWrapper, styleGroup } from './style';
+import { styleWrapper } from './style';
 
 const Input = ({ name, label, type, disabled, value, id, placeholder, onChange }) => {
   const [val, setValue] = useState(value);
@@ -14,19 +14,17 @@ const Input = ({ name, label, type, disabled, value, id, placeholder, onChange }
     }
   };
   return (
-    <div css={styleWrapper}>
-      <div data-testid="input-normal" css={styleGroup}>
-        <label htmlFor={id}>{label}</label>
-        <input
-          id={id}
-          type={type}
-          name={name}
-          value={val}
-          disabled={disabled}
-          placeholder={placeholder}
-          onChange={handleChange}
-        />
-      </div>
+    <div data-testid="input-normal" css={styleWrapper}>
+      <label htmlFor={id}>{label}</label>
+      <input
+        id={id}
+        type={type}
+        name={name}
+        value={val}
+        disabled={disabled}
+        placeholder={placeholder}
+        onChange={handleChange}
+      />
     </div>
   );
 };
