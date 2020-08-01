@@ -25,6 +25,9 @@
       "@store/*": [
         "src/js/store/*"
       ],
+      "@store": [
+        "src/js/store/store.js"
+      ],
       "@shared/*": [
         "src/js/shared/*"
       ],

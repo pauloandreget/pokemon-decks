@@ -20,6 +20,7 @@
           "^@pages/(.+)": "./src/js/components/pages/\\1",
           "^@templates/(.+)": "./src/js/components/templates/\\1",
           "^@store/(.+)": "./src/js/store/\\1",
+          "^@store$": "./src/js/store/store.js",
           "^@shared/(.+)": "./src/js/shared/\\1",
           "^@api/(.+)": "./src/js/api/\\1",
           "^@api$": "./src/js/api/index.js"
