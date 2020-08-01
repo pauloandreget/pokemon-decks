@@ -1,6 +1,7 @@
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
+const Dotenv = require('dotenv-webpack');
 const webpack = require('webpack');
 const { join } = require('path');
 
@@ -50,6 +51,7 @@ module.exports = {
   },
   plugins: [
     new webpack.optimize.ModuleConcatenationPlugin(),
+    new Dotenv(),
     new HtmlWebpackPlugin({
       title: 'Pokemon Decks',
       favicon: join(PATHS.public, 'favicon.ico'),
