@@ -5,7 +5,7 @@ import { routines } from './actions';
 const initState = new Map({
   loading: false,
   error: null,
-  cards: [],
+  cards: null,
   status: IDLE,
 });
 
