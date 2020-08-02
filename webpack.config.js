@@ -14,7 +14,9 @@ const PATHS = {
 module.exports = {
   context: __dirname,
   devtool: 'eval-source-map',
-  entry: ['react-hot-loader/patch', join(PATHS.src, 'js')],
+  entry: {
+    app: ['react-hot-loader/patch', join(PATHS.src, 'js')],
+  },
   devServer: {
     port: 9000,
     hot: true,
