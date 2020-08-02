@@ -7,8 +7,16 @@ const initState = new Map({
 
 const decksReducer = (state = initState, { type, payload }) => {
   switch (type) {
-    case routines.create.TRIGGER:
-      return state.set('decks', (state.get('decks') || []).concat(payload.data));
+    case routines.create.TRIGGER: {
+      const nextId = (state.get('decks') || []).sort((a, b) => b.id - a.id);
+      return state.set(
+        'decks',
+        (state.get('decks') || []).concat({
+          ...payload.data,
+          id: nextId.length === 0 ? 1 : nextId.id + 1,
+        })
+      );
+    }
     case routines.update.TRIGGER: {
       const decks = List(state.get('decks') || []);
       return state.set(
