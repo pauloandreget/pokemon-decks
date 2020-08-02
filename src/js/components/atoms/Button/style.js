@@ -21,14 +21,17 @@ export const styleBase = () => `
     border: 1px solid #018A42;
   }
 
-  &.disabled, &[disabled] {
-    cursor: not-allowed;
-  }
-
   &:not(:disabled):not(.disabled):active {
     color: #fff;
     box-shadow: none;
     background-color: #215C41;
     border: 1px solid #215C41;
+  }
+
+  &.disabled, &[disabled] {
+    cursor: not-allowed;
+    background-color: #e0e0e0;
+    border-color: #e0e0e0;
+    color: #fff;
   }
 `;
