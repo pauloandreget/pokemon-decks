@@ -13,7 +13,7 @@ const decksReducer = (state = initState, { type, payload }) => {
         'decks',
         (state.get('decks') || []).concat({
           ...payload.data,
-          id: nextId.length === 0 ? 1 : nextId.id + 1,
+          id: nextId.length === 0 ? 1 : nextId[0].id + 1,
         })
       );
     }
