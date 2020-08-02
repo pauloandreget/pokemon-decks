@@ -28,7 +28,7 @@ const decksReducer = (state = initState, { type, payload }) => {
             }
             return prev;
           }, [])
-          .concat(payload.data)
+          .concat({ id: payload.id, ...payload.data })
       );
     }
     case routines.remove.TRIGGER: {
@@ -36,7 +36,7 @@ const decksReducer = (state = initState, { type, payload }) => {
       return state.set(
         'decks',
         decks.reduce((prev, deck) => {
-          if (deck.service.id !== payload.id) {
+          if (deck.id !== payload.id) {
             prev.push(deck);
           }
           return prev;
