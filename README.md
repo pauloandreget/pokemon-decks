@@ -1,6 +1,6 @@
 # Pókemon Decks
 
-Exemplo básico de aplicação para criação de baralhos pokémon. Desenvolvido com stack básica com React, Redux e o Sagas como middleware da store.
+Exemplo básico de aplicação para criação de baralhos pokémon. Desenvolvido com stack básica com [React](https://reactjs.org/), [Redux](https://redux.js.org/) e [Redux-Saga](https://redux-saga.js.org/) como middleware da store.
 
 ## Desenvolvimento
 
